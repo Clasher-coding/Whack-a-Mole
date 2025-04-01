@@ -11,6 +11,7 @@
     <div class="container">
         <h1>Whack-a-Mole</h1>
         <h2 id="score">0</h2>
+        <button id="restart-btn" onclick="restartGame()">Restart Game</button>
         <div id="board"></div>
     </div>
     <footer>
@@ -46,6 +47,25 @@
         footer:hover {
             background: rgba(0, 0, 0, 0.9);
             transition: background 0.3s ease-in-out;
+        }
+
+        #restart-btn {
+            display: block; /* Ensure it's a block element for centering */
+            margin: 10px auto; /* Center horizontally */
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: black;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+
+        #restart-btn:hover {
+            background-color: #ffd633;
         }
     </style>
 </body>
