@@ -73,5 +73,19 @@ function selectTile() {
     else if (this == currPlantTile) {
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); 
         gameOver = true;
+        document.getElementById("restart-btn").style.display = "block"; // Show restart button
     }
+}
+
+function restartGame() {
+    score = 0;
+    gameOver = false;
+    document.getElementById("score").innerText = score.toString();
+    document.getElementById("restart-btn").style.display = "none"; // Hide restart button
+
+   
+    if (currMoleTile) currMoleTile.innerHTML = "";
+    if (currPlantTile) currPlantTile.innerHTML = "";
+    currMoleTile = null;
+    currPlantTile = null;
 }
